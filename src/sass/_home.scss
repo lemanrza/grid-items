@@ -1,0 +1,134 @@
+
+ 
+ .grid-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 2rem 10%;
+    display: grid;
+    gap: 15px;
+ 
+    .item {
+  
+       position: relative;
+       overflow: hidden;
+       &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+           background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+           transition: .6s;
+           opacity: .7;
+       }
+       &:hover{
+          &::before{
+             scale: 1.2;
+             opacity: 1;
+          }
+       }
+ 
+       &:first-child {
+          grid-column: 1/6;
+          grid-row: 1/5;
+          position: relative;
+          &::before{
+             background-image: url(https://aml-group.com/app/uploads/2023/03/01-All-Quiet.jpg);
+          }
+       }
+ 
+       &:nth-child(2) {
+          grid-column: 1/6;
+          grid-row: 5/7;
+          &::before{
+          background-image: url(https://myhotposters.com/cdn/shop/products/mL0284_grande.jpg?v=1571444811);
+          }
+       }
+ 
+       &:nth-child(3) {
+          grid-column: 6/12;
+          grid-row: 1/2;
+          &::before{
+          background-image: url(https://w0.peakpx.com/wallpaper/307/244/HD-wallpaper-the-batman-movie-poster-art-the-batman-batman-superheroes-movies-2022-movies.jpg);
+       }
+    }
+ 
+       &:nth-child(4) {
+          grid-column: 6/9;
+          grid-row: 2/4;
+          &::before{
+          background-image: url(https://www.tallengestore.com/cdn/shop/products/PrisonBreak-NetflixTVShowPoster_2b91c841-8ef7-432b-b6eb-bd68a801843f_large.jpg?v=1589271925);
+       }}
+ 
+       &:nth-child(5) {
+          grid-column: 9/12;
+          grid-row: 2/5;
+          &::before{
+          background-image: url(https://cdn.europosters.eu/image/1300/posters/la-casa-de-papel-i101932.jpg);
+          }
+       }
+ 
+       &:nth-child(6) {
+          grid-column: 6/9;
+          grid-row: 4/7;
+          &::before{
+ 
+          background-image: url(https://creativereview.imgix.net/content/uploads/2023/12/Oppenheimer.jpg?auto=compress,format&q=60&w=1263&h=2000);
+       }
+    }
+       &:nth-child(7) {
+          grid-column: 9/12;
+          grid-row: 5/7;
+          &::before{
+ 
+          background-image: url(https://m.media-amazon.com/images/M/MV5BODk2MDUyMDc1N15BMl5BanBnXkFtZTcwMTQ1ODQ4NA@@._V1_.jpg);
+          }
+       }
+    }
+ }
+ @media (max-width:991px) {
+    .grid-container{
+       height: 200vh;
+    .item {
+    &:first-child {
+       grid-column: 1/12;
+       grid-row: 1/3;
+    }
+ 
+    &:nth-child(2) {
+       grid-column: 1/12;
+       grid-row: 3/5;
+ 
+    }
+ 
+    &:nth-child(3) {
+       grid-column: 1/12;
+       grid-row: 5/7;
+    }
+ 
+    &:nth-child(4) {
+       grid-column: 1/12;
+       grid-row: 7/9;
+    }
+ 
+    &:nth-child(5) {
+       grid-column: 1/12;
+       grid-row: 9/11;
+    }
+ 
+    &:nth-child(6) {
+       grid-column: 1/12;
+       grid-row: 11/13;
+    }
+ 
+    &:nth-child(7) {
+       grid-column: 1/12;
+       grid-row: 13/15;
+    }
+ }
+ }
+ }
